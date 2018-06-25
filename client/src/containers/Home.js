@@ -69,7 +69,7 @@ class Home extends Component {
                     type="text"
                     onChange={this.handleOnChange}
                     className="form-control mb-2" />
-                  <button type="submit" className="btn btn-block btn-success" onClick={this.articleSearch}>
+                  <button type="submit" className="btn btn-block btn-success" style={{ cursor: 'pointer' }} onClick={this.articleSearch}>
                     Submit
                   </button>
                 </div>

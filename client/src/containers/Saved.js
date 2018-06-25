@@ -14,7 +14,7 @@ class Saved extends Component {
 
   getSavedArticles = () => {
     API.articleRetrieve()
-      .then(res => this.setState({articles: res.data}))
+      .then(res => this.setState({ articles: res.data }))
       .catch(err => console.log(err))
   }
 
@@ -23,7 +23,7 @@ class Saved extends Component {
       .then(() => this.getSavedArticles())
       .catch(err => console.log(err))
   }
-  
+
 
 
   render() {
@@ -53,7 +53,7 @@ class Saved extends Component {
                     <li key={article._id} className="list-group-item d-flex justify-content-between align-items-center">
                       <a href={article.url} target="_blank">{article.title} - {moment(article.date).format("Do	MMMM YYYY hh:mm:ss a")}</a>
                       <span
-                        className="badge badge-primary badge-pill"
+                        className="badge badge-primary badge-pill" style={{ cursor: 'pointer' }}
                         onClick={() => this.deleteArticle(article._id)}>Delete Article</span>
                     </li>
                   ))}
